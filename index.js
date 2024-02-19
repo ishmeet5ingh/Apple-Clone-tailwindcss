@@ -13,7 +13,7 @@ devices.forEach(item =>{
     imgElement.style.paddingBlock = "15px"
     div.appendChild(imgElement)
     div.appendChild(heading)
-    div.classList.add("pr-4", "md:pr-10", "inline-block", )
+    div.style.display = "inline-block"
     devs.appendChild(div)
 })
 
