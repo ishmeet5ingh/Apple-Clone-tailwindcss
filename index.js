@@ -9,7 +9,8 @@ devices.forEach(item =>{
     var heading = document.createElement('h4');
     imgElement.src = item.img;
     heading.innerHTML = item.heading;
-    imgElement.classList.add("w-32",)
+    imgElement.style.width = "150px"
+    imgElement.style.paddingBlock = "15px"
     div.appendChild(imgElement)
     div.appendChild(heading)
     div.classList.add("pr-4", "md:pr-10", "inline-block", )
@@ -69,4 +70,3 @@ const slideImage = () => {
         }); 
     }, 1000);
 });
-
