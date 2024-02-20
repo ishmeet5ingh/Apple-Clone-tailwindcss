@@ -1,6 +1,28 @@
 import { devices } from './devices.js';
+import { latest  } from './latest.js';
 
+console.log(latest)
 const devs = document.querySelector(".devices");
+const latst = document.querySelector(".latest");
+
+latest.forEach((item)=>{
+    var div = document.createElement('div');
+    var device = document.createElement('p');
+    var feature = document.createElement('h2');
+    var priceing = document.createElement('h3');
+
+    device.innerHTML = item.device;
+    feature.innerHTML = item.feature;
+    priceing.innerHTML = item.priceing
+
+    div.appendChild(device);
+    div.appendChild(feature);
+    div.appendChild(priceing);
+    latst.appendChild(div);
+    div.classList.add("latestDiv")
+    div.style.backgroundImage = `url(${item.img})`
+})
+
 
 
 devices.forEach(item =>{
@@ -10,7 +32,7 @@ devices.forEach(item =>{
     imgElement.src = item.img;
     heading.innerHTML = item.heading;
     imgElement.style.width = "150px"
-    imgElement.style.paddingBlock = "15px"
+    imgElement.style.paddingRight = "15px"
     div.appendChild(imgElement)
     div.appendChild(heading)
     div.style.display = "inline-block"
